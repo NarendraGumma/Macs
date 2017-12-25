@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">SMMacs</string>
+    <string name="hint" translatable="false"><font size="20">Username</font></string>
+    <string name="hintPass" translatable="false"><font size="20">Password</font></string>
+    <string name="Login" translatable="false"><font size="20">Login</font></string>
+    <string name="forgotPass" translatable="false"><font size="20">Forgot Password?</font></string>
+</resources>

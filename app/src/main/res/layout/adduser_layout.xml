@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name *"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/etLasName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name *"
+        android:layout_below="@+id/etFirstName"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/etMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email ID"
+        android:layout_below="@+id/etLasName"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/etPhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number *"
+        android:layout_below="@+id/etMail"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/etAlternameNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alternate Number"
+        android:layout_below="@+id/etPhoneNum"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/spPrefix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Prefix *"
+        android:textColorHint="#05ab9a"
+        app:met_floatingLabel="normal"
+        android:gravity="center"
+        android:layout_below="@+id/etAlternameNum"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <EditText
+        android:id="@+id/etGuardianName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Guardian Name *"
+        android:layout_below="@+id/spPrefix"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/spState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select State *"
+        android:textColorHint="#05ab9a"
+        app:met_floatingLabel="normal"
+        android:gravity="center"
+        android:layout_below="@+id/etGuardianName"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        />
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/spDistrict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select District *"
+        android:textColorHint="#05ab9a"
+        app:met_floatingLabel="normal"
+        android:gravity="center"
+        android:layout_below="@+id/spState"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/spMandal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Mandal *"
+        android:textColorHint="#05ab9a"
+        app:met_floatingLabel="normal"
+        android:gravity="center"
+        android:layout_below="@+id/spDistrict"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        />
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/spVillage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Village"
+        android:textColorHint="#05ab9a"
+        app:met_floatingLabel="normal"
+        android:gravity="center"
+        android:layout_below="@+id/spMandal"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        />
+
+            <RelativeLayout
+                android:id="@+id/relativeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/spVillage"
+                android:layout_centerInParent="true"
+                >
+
+                <ImageView
+                    android:id="@+id/imageLabel"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/selectImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageLabel"
+                    android:layout_centerInParent="true"
+                    android:singleLine="true"
+                    android:text="Select Image"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:hint="Address"
+                android:layout_below="@+id/relativeImage"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:background="@drawable/addressbg"
+
+                />
+
+            <EditText
+                android:id="@+id/etUserid"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:hint="User ID *"
+                android:layout_below="@+id/etAddress"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                />
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/spGroupVillage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Group Village *"
+                android:textColorHint="#05ab9a"
+                app:met_floatingLabel="normal"
+                android:gravity="center"
+                android:layout_below="@+id/etUserid"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/spGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Group"
+                android:textColorHint="#05ab9a"
+                app:met_floatingLabel="normal"
+                android:gravity="center"
+                android:layout_below="@+id/spGroupVillage"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                android:id="@+id/spStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Status *"
+                android:textColorHint="#05ab9a"
+                app:met_floatingLabel="normal"
+                android:gravity="center"
+                android:layout_below="@+id/spGroup"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+
+        >
+        <Button
+            android:id="@+id/btnAddSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="49"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/spalshbg"
+            android:layout_marginRight="1dp"
+            android:text="Submit"/>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnAddCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="49"
+            android:textColor="#FFF"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/spalshbg"
+            android:textStyle="bold"
+            android:layout_marginLeft="1dp"
+            android:textSize="18sp"
+            android:text="Cancel"/>
+
+    </LinearLayout>
+</RelativeLayout>
